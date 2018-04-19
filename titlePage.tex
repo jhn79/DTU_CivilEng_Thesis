@@ -1,0 +1,90 @@
+\begin{titlingpage}
+	\thispagestyle{empty}
+	\enlargethispage{1.3cm}
+	\calccentering{\unitlength}
+	\begin{adjustwidth}{\unitlength}{-\unitlength}
+		\vspace*{-1.9cm}
+		\begin{textblock}{6.5}(5.5,0) %
+			\includegraphics[width=\textwidth]{gfx/DTULogo}
+		\end{textblock}
+
+		\begin{raggedright}
+			\vspace{\stretch{1}}
+			\begin{Spacing}{1.2}
+				{\sffamily\HUGE\textbf{\ThTitleEN}\\[1.5cm]}
+				{\sffamily\LARGE{Master's Thesis, \ThEndDate}\\[2cm]}
+			\end{Spacing}
+			\vspace{\stretch{2}}
+			{\LARGE\sffamily\ThAuthors\\[2cm]}
+		\end{raggedright}
+		\begin{raggedright}
+			\includegraphics[width=0.5\textwidth]{gfx/DTUBYGlogo}%
+			\ifthenelse{\equal{\bCompanyLogo}{true}}{%
+				\begin{textblock}{3}(9,-0.85) %
+					\includegraphics[width=\textwidth]{gfx/CompanyLogo}
+				\end{textblock}
+			}{} % End if
+		\end{raggedright}
+	\end{adjustwidth}
+
+	\cleardoublepage
+
+	\thispagestyle{empty}
+	\enlargethispage{1.3cm}
+	\calccentering{\unitlength}
+	\begin{adjustwidth}{\unitlength-0.4cm}{-\unitlength-0.4cm}
+		\begin{center}
+			\vspace{\stretch{1}}
+			\vspace{1.5cm}
+			{\Large\scshape\ThAuthors}\\[2cm]
+			\begin{Spacing}{3}
+				{\sffamily\HUGE\textbf{\ThTitleEN}}\\
+				{\sffamily\Large{{\ThSubtitleEN}}}\\[1cm]
+                \ifthenelse{\equal{\ThEducation}{MSc}}{
+				{\sffamily\LARGE{Master's Thesis, \ThEndDate}}\\[2cm]}{}
+                \ifthenelse{\equal{\ThEducation}{BSc}}{
+				{\sffamily\LARGE{Bachelor's Thesis, \ThEndDate}}\\[2cm]}{}
+			\end{Spacing}
+			\vspace{\stretch{2}}
+			\begin{Spacing}{1.5}
+				{\Large Supervisors:}\\
+				{\Large\ThSupervisors\\}
+			\end{Spacing}
+			\vspace{\stretch{3}}
+			{\sffamily DTU - Technical University of Denmark, Kgs. Lyngby - \ThYear}\\[1cm]
+			\vspace{\stretch{4}}
+		\end{center}
+	\end{adjustwidth}
+
+	\cleardoublepage
+	\thispagestyle{empty}
+	\calccentering{\unitlength}
+	\begin{adjustwidth*}{\unitlength}{-\unitlength}
+		\textbf{\ThTitleEN}
+		\vspace{\stretch{1}}
+
+		\noindent\textbf{This report was prepared by:}\\
+		\ThAuthors
+
+		\vspace{\stretch{2}}
+
+		\noindent\textbf{Supervisor(s):}\\
+		\ThSupervisors
+
+		\vspace{\stretch{3}}
+
+		\noindent\ThDepartment
+
+		\vspace{\stretch{4}}
+
+		\noindent{\renewcommand{\arraystretch}{2}\begin{tabular}{@{}lp{0.75\textwidth}}
+			Project period:&	\ThProjectPeriod\\
+			ECTS:&		\ThECTS\\
+			Education:&	\ThEducation\\
+			Field:&		\ThField\\
+			Class:&		\ThClass\\
+			Remarks:&	\ThRemarks
+			%Copyrights:&\ThCopyrights
+		\end{tabular}}
+	\end{adjustwidth*}
+\end{titlingpage} 

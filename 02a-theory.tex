@@ -1,0 +1,42 @@
+\chapter{Theory and method for analytical considerations}
+In this part more advanced analytical models/solutions for e.g. testing numerical implementations or describing a behaviour of a material, structural component etc. should be presented. However, simple calculations such as deriving the strain from the output of a strain gauge etc. belongs in the experimental part.
+
+It should be noted that some projects might not need all the different Theory and method chapters given here, please adjust according to your needs/preferences. 
+
+\section{Equations}
+All equations should be numbered and symbols used should be explained at first use and found in the nomenclature.
+\begin{equation}
+  \sigma_{ij}=D_{ijkl}\varepsilon_{kl}
+\end{equation}
+
+where $\sigma_{ij}$ is the stress tensor\nomenclature[gsigma]{$\sigma_{ij}$}{The stress tensor}, $\varepsilon_{ij}$ is the strain tensor\nomenclature[gepsilon]{$\varepsilon_{kl}$}{The strain tensor}, and $D_{ijkl}$ is the elastic stiffness tensor\nomenclature[lD]{$D_{ijkl}$}{The elastic stiffness tensor}.
+
+\section{Tables}
+All tables should be referenced in the text. The caption of a table should be placed above the table. It should be possible to read and understand a table and its caption on its own. Discussions etc. on the table should be kept in the main text so all tables are kept as neutral as possible.
+
+\begin{table}[H]
+\centering
+\caption{Mean residual stresses within each measurement field}
+\label{tab:01}
+\begin{tabular}{@{}cccc@{}}
+\hline\noalign{\smallskip}
+\multirow{2}{*}{Thickness {[}mm{]}} & \multirow{2}{*}{Field} & \multicolumn{2}{c}{Residual stresses [MPa]} \\
+ &  & $\sigma_{s}$ & $\sigma_{c}$ \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\multirow{3}{*}{19} & 1 & -74.7 & 42.1 \\
+ & 2 & -73.5 & 42.2 \\
+ & 3 & -74.8 & 43.1 \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+\section{Figures}
+As for the tables all figures should be self-explained with some assistance from the caption. The caption should be placed below the figure and all figures should be referenced in the text. 
+
+The importance of graphics in a thesis should not be underestimated. Graphics are much easier to remember than text and less likely to be misinterpreted by the reader. A good rule of thumb is that you should be able to get all the main points in the thesis simply by getting all the figures, tables etc. in the thesis.
+
+Be careful when preparing figures that all information (numbers, texts, linetypes, etc.) is clearly seen (also in the printed version) and that the used fontsize do not deviate too much from the main text (12 pt.). 
+
+If you are using this template, the height and width of the text is \the\textheight \,and \the\textwidth, respectively. This might be useful for you when preparing your artwork.
+
+For preparing artwork I use a small freeware program called IPE which can be downloaded from \url{http://ipe.otfried.org/}. In order for it to be fully functional you need a working \LaTeX installation. One of the advantages is that the program is highly customizable and allows you to e.g. place equations etc. over pictures or graphs.

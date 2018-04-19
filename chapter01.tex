@@ -1,0 +1,80 @@
+\chapter{Chapter Title}
+
+\section{Equations, Tables and Figures}
+
+This is the convection diffusion equation in 2D \citep{EgelandGravdahl2002}:
+\begin{equation}
+ \rho c\frac{\partial T}{\partial t}+\rho c\frac{\partial\left(\mathbf{u}T\right)}{\partial x}+\rho c\frac{\partial\left(\mathbf{u}T\right)}{\partial y}=\frac{\partial}{\partial x}\left(\kappa\frac{\partial T}{\partial x}\right)+\frac{\partial}{\partial y}\left(\kappa\frac{\partial T}{\partial y}\right)+S_T
+ \label{eq:ConvectionDiffusionEquation2D}
+\end{equation}
+
+I am referring to equation \eqref{eq:ConvectionDiffusionEquation2D}.
+
+
+The composition of wheat straw is shown in table \ref{tab:RawWheatStrawComposition}.
+\begin{table}[htbp]
+ \centering
+ \begin{tabular}{l|r|r}
+  Component			&\multicolumn{1}{c|}{$\%$}	&\multicolumn{1}{c}{$\%$}\\\hline\hline
+  Cellulose			&35.0						&39.8\\
+  Hemicellulose $\left\{
+  \begin{array}{l}
+   \textup{Xylan}\\
+   \textup{Arabinan}
+  \end{array}\right.$ 		& $\left.
+				    \begin{array}{r}
+				      19.6\\
+				      2.7
+				    \end{array}\right\}22.3$	& $\left.\begin{array}{r}24.5\\2.8\end{array}\right\}27.3$\\
+  Lignin 			&15.6						&22.6\\
+  Ash				&6.5						&4.2\\
+  Residuals			&20.6						&6.1\\\hline
+ \end{tabular}
+ \caption{Chemical composition of untreated wheat straw.}
+ \label{tab:RawWheatStrawComposition}
+\end{table}
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.1\textwidth]{gfx/DTULogo}
+ \caption{A single figure.}
+ \label{fig:SingleFigure}
+\end{figure}
+
+
+Reference to figure \ref{fig:BigFigure}. Reference to subfigure \ref{fig:Subfig1}.
+\begin{figure}[htbp]
+ \centering
+ \subbottom[Left caption]{
+  \includegraphics[width=0.2\textwidth]{gfx/DTULogo}
+  \label{fig:Subfig1}
+ }
+ \subbottom[Right caption]{
+  \includegraphics[width=0.2\textwidth]{gfx/DTULogo}
+  \label{fig:Subfig2}
+ }
+ \caption{Subfigures.}
+ \label{fig:BigFigure}
+\end{figure}
+
+
+
+\section{Lists}
+
+This is a bullet list:
+\begin{itemize}
+ \item First item
+ \item Second item
+\end{itemize}
+
+This is a numbered list:
+\begin{enumerate}
+ \item First item
+ \item Second item
+\end{enumerate}
+
+
+\section{Other}
+
+This text has a footnote.\footnote{This is a footnote}
+

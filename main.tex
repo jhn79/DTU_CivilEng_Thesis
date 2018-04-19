@@ -1,0 +1,141 @@
+\documentclass[a4paper,12pt]{memoir}
+\chapterstyle{madsen}% Chapter style
+\usepackage[utf8]{inputenc} %
+\usepackage[T1]{fontenc} % Setting the output font
+\usepackage{times}
+\usepackage{textpos} % positioning of textblocks on the page
+\usepackage{graphicx} % includes graphics in document
+\graphicspath{{gfx/}} % Path to graphics
+\usepackage{ifthen} % provides ifthen structure
+\usepackage{mathtools}
+\usepackage[backend=biber, style=authoryear-comp, natbib=true]{biblatex}
+\addbibresource{mybib.bib}
+\usepackage[intoc, refpage]{nomencl} % Nomenclature package
+\makenomenclature
+\usepackage{float}
+\usepackage{multirow}
+% for the nomenclature three groups exists (implemented below) 1) the greek symbols, 2) Latin symbols and 3) Abbreviations they are grouped by the initial letter in the nomenclature command, e.g.: "\nomenclature[gepsilon]{$\varepsilon_{kl}$}{The strain tensor}" is placed in the greek symbols due to the initial "g" in the square brackets.
+
+\renewcommand{\nomgroup}[1]{%
+    \ifthenelse{\equal{#1}{G}}{\item[\textbf{Symbols - Greek}]}{%
+        \ifthenelse{\equal{#1}{L}}{\item[\textbf{Symbols - Latin}]}{%
+            \ifthenelse{\equal{#1}{A}}{\item[\textbf{Abbreviations}]}{}}}}
+
+
+%\usepackage{lipsum}
+%\usepackage{color}
+
+%\usepackage{textcomp}
+%\usepackage{hyperref}
+
+%\usepackage{indentfirst}
+%\usepackage{tikz}
+%\usepackage{pgfplots}
+%\usepackage{ifthen}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Define layout dimensions
+\setlrmarginsandblock{35mm}{25mm}{*}
+\setulmarginsandblock{30mm}{30mm}{*}
+\setheadfoot{8mm}{10mm}
+\checkandfixthelayout
+\OnehalfSpacing
+
+% Get a signature command
+\makeatletter
+\newcommand*{\getlength}[1]{\strip@pt#1}
+\makeatother
+
+\newlength{\signlength}
+\setlength{\signlength}{0.5\textwidth}
+
+\newcommand{\signature}[1]{%
+\noindent \line(1,0){\getlength{\signlength}}\\
+\noindent #1
+}
+
+
+% Change table of contents name
+%\addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
+\renewcommand\contentsname{Table of Content}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define thesis data
+\def\ThYear{2014}
+
+\def\ThTitleEN{Writing a MSc (or BSc thesis)}
+\def\ThSubtitleEN{- Suggested Guideline for DTU BYG Thesis}
+
+\def\ThAuthors{Jens Henrik Nielsen}
+\def\ThSupervisors{Jens Henrik Nielsen, Associate Professor, DTU-BYG\\ Supervisor 2, title, affilition}
+\def\ThDepartment{\textbf{DTU Civil Engineering}\\ Structural Engineering\\ Technical University of Denmark\\ Brovej, Building 118\\ 2800 Kgs. Lyngby\\ Denmark\\ Tel: +45 4525 1700}
+
+\def\ThBeginDate{February 2014}
+\def\ThEndDate{July 2014}
+\def\ThProjectPeriod{\ThBeginDate - \ThEndDate}
+\def\ThECTS{30}
+\def\ThEducation{MSc}  % either MSc, BSc
+\def\ThField{Structural Engineering}
+\def\ThClass{No confidentiality} %Confidential until October 1st, 2016}
+\def\ThRemarks{This report is submitted as partial fulfillment of the requirements for graduation in the above education at the Technical University of Denmark.}
+
+% Company logo
+\def\bCompanyLogo{false} % true or false
+
+\begin{document}
+
+\input{titlePage}
+
+\frontmatter
+
+
+
+\input{00-preface} % and acknowledgement
+
+\input{00-abstract}
+\newpage
+\tableofcontents*
+
+\mainmatter
+
+\input{01-intro}
+
+\input{02a-theory}  % analytical part
+\input{02b-theory}  % numerical part
+\input{02c-theory}  % experimential part
+\input{03-result}
+\input{04-conclusion}
+
+%\input{chapter01}
+%\input{chapter02}
+%\input{chapter03}
+%\input{chapter04}
+%\input{chapter05}
+%\input{chapter06}
+
+
+\appendix
+\appendixpage
+
+
+
+\input{a01-management}       %
+\input{a02-presenting}
+\input{a03-annex}
+
+%\input{appendix01}
+%\input{appendix02}
+%\input{appendix03}
+
+\backmatter
+
+\printnomenclature
+
+\printbibliography
+\end{document} 
